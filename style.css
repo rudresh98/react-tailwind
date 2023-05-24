@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* background-color: goldenrod; */
+  color: rgb(74, 72, 72);
+}
+.custom-nav {
+  background-color: rgb(211, 201, 201);
+  padding: 1rem 0 1rem 0;
+}
+.custom-ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+li {
+  margin: 0 1rem 0 1rem;
+  cursor: pointer;
+}

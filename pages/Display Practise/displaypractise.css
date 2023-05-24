@@ -1,0 +1,38 @@
+.custom-display {
+  margin: 2rem 1rem 2rem 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  height: 20rem;
+  align-items: center;
+}
+.custom-box-1 {
+  width: 5rem;
+  height: 5rem;
+  background-color: aquamarine;
+  margin: 1rem 0;
+}
+.custom-box-2 {
+  width: 5rem;
+  height: 5rem;
+  background-color: red;
+  margin: 1rem 0;
+}
+
+.custom-box-3 {
+  width: 5rem;
+  height: 5rem;
+  background-color: blue;
+  margin: 1rem 0;
+}
+.custom-box-4 {
+  width: 5rem;
+  height: 5rem;
+  background-color: green;
+  margin: 1rem 0;
+}
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
