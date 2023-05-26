@@ -1,0 +1,7 @@
+.custom-bg {
+  background-color: brown;
+  color: white;
+  border: 1px solid dotted;
+  border-radius: 5%;
+  padding: 10px;
+}
