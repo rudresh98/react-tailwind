@@ -31,3 +31,6 @@
 // obesity
 // your are fit
 // you are under weight
+const str = new String("rahul");
+const str1 = new String("rahul");
+console.log(str === str1);
