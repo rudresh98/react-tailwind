@@ -1,0 +1,36 @@
+complete these task by using inbuild function of js
+
+task 1
+1. need to string array
+
+["rajesh","ram"]
+string length >5 store it return array
+string length < 5 store it return array
+
+
+2. number array
+
+you need all the element by 5 
+element > 40 store in new array return array
+element < 40 skip no need to store
+
+
+3. number array 
+
+logic to check wether ele of that array is even or odd
+
+if even store it and return array
+if odd store it to another value return array
+
+4. create function that will called as per input passed into it 
+
+input 2 -->> 2 sec 
+log("hello world")
+
+function will after 5 sec
+
+5. create function that will called repeatedly as per input
+
+input 5 - 5sec
+log("hi there")
+function will call everytime after 5 sec 

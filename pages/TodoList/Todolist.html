@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+  </head>
+  <body>
+    <section>
+      <form onsubmit="onSubmitForm(event)">
+        <div>
+          <label for="title"></label>
+          <input
+            type="text"
+            onkeyup="onChangeInputHandler(event)"
+            name="title"
+            placeholder="title"
+            id="title"
+          />
+        </div>
+        <div id="result"></div>
+        <div>
+          <button type="submit">add</button>
+        </div>
+      </form>
+    </section>
+    <script src="./TodoList.js"></script>
+  </body>
+</html>
