@@ -1,0 +1,39 @@
+1. reverse string not using any pre defined functions in js
+
+
+2. find max number in an array
+
+input [1,2,3,4]
+output 4
+
+
+
+3. remove duplicate ele from arr and log that array
+input [2,3,4,5,2,3,5]
+output [2,3,4,5]
+
+4. write code to generate ID everytime function called 
+and store those value in array
+// Math
+
+"POS123"
+"POS01"
+"POS02"
+
+
+5. call history list
+[
+     {
+          fname:"rudresh",
+     counter:1,
+     phonenumber:123,
+     time:"3pm"
+     },
+     {
+          fname:"rakesh",
+          counter:2,
+          phonenumber:345,
+          time:"1pm"
+     }
+]
+funct(number,name)

@@ -108,3 +108,18 @@ const arr1 = [10, 20, 30, 40];
 // const filteredHandler = (ele, i, arr) => ele >= 30;
 // const filteredData = arr1.filter(filteredHandler);
 // console.log({ filteredData });
+console.time("0");
+[1, 2, 3, 4].forEach((ele) => console.log({ ele }));
+console.timeEnd("0");
+
+const arr = [1, 2, 3];
+console.time("1");
+for (let index = 0; index < arr.length; index++) {
+  console.log(arr[index]);
+}
+console.timeEnd("1");
+console.time("2");
+for (const iterator of arr) {
+  console.log({ iterator });
+}
+console.timeEnd("2");
