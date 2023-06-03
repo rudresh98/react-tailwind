@@ -1,6 +1,8 @@
 import React from "react";
 import "./Main.css";
 import UserDetails from "../UserDetails/UserDetails";
+import Expense from "../Expense/Expense";
+import logo from "../../logo.svg";
 const Main = () => {
   const data = [
     {
@@ -8,6 +10,7 @@ const Main = () => {
       age: 13,
       gender: "male",
       id: 1,
+      image: logo,
     },
     {
       name: "rajesh",
@@ -51,8 +54,10 @@ const Main = () => {
             // key={index}
             id={ele.id}
             key={ele.id}
+            image={ele.image}
           />
         ))}
+        {/* <Expense /> */}
 
         {/* <UserDetails
           name={data[0].name}

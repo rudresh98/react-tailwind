@@ -1,8 +1,9 @@
 import React from "react";
 import "./UserDetails.css";
-const UserDetails = ({ name, age, gender, id }) => {
+const UserDetails = ({ name, age, gender, id, image }) => {
   return (
     <div>
+      <img src={image} alt="noimage" srcSet="" width={100} height={100} />
       <div className="user-details">
         <p>
           <span className="heading">id:</span>
