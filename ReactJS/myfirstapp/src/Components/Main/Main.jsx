@@ -3,6 +3,7 @@ import "./Main.css";
 import UserDetails from "../UserDetails/UserDetails";
 import Expense from "../Expense/Expense";
 import logo from "../../logo.svg";
+import OtpGenerator from "../Otp Generator/OtpGenerator";
 const Main = () => {
   const data = [
     {
@@ -46,7 +47,7 @@ const Main = () => {
   return (
     <React.Fragment>
       <main>
-        {data.map((ele, index, arr) => (
+        {/* {data.map((ele, index, arr) => (
           <UserDetails
             name={ele.name}
             age={ele.age}
@@ -56,8 +57,9 @@ const Main = () => {
             key={ele.id}
             image={ele.image}
           />
-        ))}
-        {/* <Expense /> */}
+        ))} */}
+        <Expense />
+        {/* <OtpGenerator /> */}
 
         {/* <UserDetails
           name={data[0].name}
