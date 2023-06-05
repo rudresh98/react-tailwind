@@ -16,8 +16,6 @@ const ExpenseForm = (props) => {
   };
   const onSubmitHandler = () => {
     const data = { date, amount: +amount, name };
-    console.log("expense form", data);
-
     if (name && amount) {
       props.onExpenseDataHandler(data);
       props.onShowMessageHandler(false);
