@@ -1,18 +1,38 @@
 // react hooks use state
 import { useState } from "react";
 import ExpenseList from "../ExpenseList/ExpenseList";
-import logo from "../../logo.svg";
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
 const Expense = () => {
+  const [expenseData, setExpenseData] = useState([]);
+  const [showMessage, setShowMessage] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const onExpenseDataHandler = (data) => {
+    console.log(data);
+    setExpenseData((prevState) => [...prevState, data]);
+  };
+  const onShowMessageHandler = (msg) => {
+    setShowMessage(msg);
+  };
+  const onMessageHandler = (msgStatus) => {
+    console.log(msgStatus);
+    setMessage(msgStatus);
+  };
   return (
     <>
-      <ExpenseForm />
+      <ExpenseForm
+        onExpenseDataHandler={onExpenseDataHandler}
+        onShowMessageHandler={onShowMessageHandler}
+        onMessageHandler={onMessageHandler}
+      />
       <hr />
-      {/* <div className="contanier">
+      <div className="contanier">
         {showMessage && (
           <div className="row">
             <div className="col-md">
-              <p className="text-center">{message}</p>
+              <p className="text-center text-danger fs-3 text">
+                Error :-{message}
+              </p>
             </div>
           </div>
         )}
@@ -33,6 +53,7 @@ const Expense = () => {
                   amount={ele.amount}
                   date={ele.date}
                   index={index}
+                  key={index}
                 />
               ))
             ) : (
@@ -41,9 +62,8 @@ const Expense = () => {
           </div>
           <div className="col-md-2"></div>
         </div>
-      </div> */}
+      </div>
       <hr />
-      {/* <img src={logo} alt="logo" srcSet="" width={100} height={100} /> */}
     </>
   );
 };

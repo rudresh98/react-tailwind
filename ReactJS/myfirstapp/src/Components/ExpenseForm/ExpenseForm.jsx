@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
-const ExpenseForm = () => {
-  const initalValue = [];
-  const [expenseData, setExpenseDate] = useState(initalValue);
-
+const ExpenseForm = (props) => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
-  const [message, setMessage] = useState("");
-  const [showMessage, setShowMessage] = useState(false);
   const onNameChangeHandler = (event) => {
     //     name = event.target.value; wrong syntax
     setName(event.target.value);
@@ -21,20 +16,18 @@ const ExpenseForm = () => {
   };
   const onSubmitHandler = () => {
     const data = { date, amount: +amount, name };
-    if (name) {
-      setExpenseDate((prevState) => [...prevState, data]);
+    console.log("expense form", data);
+
+    if (name && amount) {
+      props.onExpenseDataHandler(data);
+      props.onShowMessageHandler(false);
       setAmount("");
       setDate("");
       setName("");
-      setShowMessage(false);
     } else {
-      setShowMessage(true);
-      setMessage("please enter name");
+      props.onShowMessageHandler(true);
+      props.onMessageHandler("name & amount are required");
     }
-    console.log(message);
-  };
-  const clearExpenseHandler = () => {
-    setExpenseDate([]);
   };
   return (
     <>
@@ -108,11 +101,7 @@ const ExpenseForm = () => {
                   </button>
                 </div>
                 <div className="col-md">
-                  <button
-                    type="button"
-                    className="btn btn-dark"
-                    onClick={clearExpenseHandler}
-                  >
+                  <button type="button" className="btn btn-dark">
                     clear expense
                   </button>
                 </div>
