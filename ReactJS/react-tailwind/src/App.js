@@ -1,13 +1,18 @@
 import "./App.css";
-import Counter from "./Components/Counter";
-import UseEffectHook from "./Components/UseEffectHook";
+import Header from "./Components/Header/Header";
+import RoutesModule from "./Routes/RoutesModule";
 
 function App() {
   return (
     <>
       {/* <Counter /> */}
-      <UseEffectHook />
-      <div></div>
+      {/* <UseEffectHook /> */}
+      <div>
+        <Header />
+      </div>
+      <div>
+        <RoutesModule />
+      </div>
     </>
   );
 }
